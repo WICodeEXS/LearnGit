@@ -3,11 +3,20 @@
 
 using namespace std;
 
-int main () {
-    ifstream fileReader {"index.html"};
+int main() {
+    // open the HTML file for reading
+    ifstream fileReader{"index.html"};
+    if (!fileReader.is_open()) {
+        cerr << "Failed to open index.html" << endl;
+        return 1;
+    }
 
-    // bug!
-    for (int buffer=0;fileReader>>buffer;cout << buffer);
+    // read the file line-by-line and print its contents
+    string line;
+    while (getline(fileReader, line)) {
+        cout << line << '\n';
+    }
 
     cout << "Hello, world" << endl;
+    return 0;
 }
