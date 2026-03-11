@@ -17,6 +17,6 @@ int main() {
         cout << line << '\n';
     }
 
-    cout << "Hello, world" << endl;
+    cout << "Hello, world!" << endl;
     return 0;
 }
