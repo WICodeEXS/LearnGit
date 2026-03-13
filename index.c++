@@ -3,6 +3,8 @@
 
 using namespace std;
 
+string input (string);
+
 int main() {
     // open the HTML file for reading
     ifstream fileReader{"index.html"};
@@ -21,13 +23,27 @@ int main() {
 
     cout << "Wi" << endl;
 
-    string name = "Hello, world";
+    string name = "Name";
 
-    cout << "~ (Enter your name)" << endl << "\t" << ">";
+    cout << "~ (Enter your name)" << endl << ">> ";
 
     cin >> name;
 
     cout << "Hello friend: \"<{:" << name << ":}>\"" << endl;
 
+    bool isWantHi = false;
+
+    cout << "~ (\"Enter your name\")" << endl << ">> ";
+
+    cin >> isWantHi;
+
+    if (isWantHi) {
+        cout << "Hi, world" << endl;
+    }
+
     return 0;
+}
+
+string input (string& message) {
+
 }
