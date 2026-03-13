@@ -20,5 +20,14 @@ int main() {
     cout << "Hello, world!" << endl;
 
     cout << "Wi" << endl;
+
+    string name = "Hello, world";
+
+    cout << "~ (Enter your name)" << endl << "\t" << ">";
+
+    cin >> name;
+
+    cout << "Hello friend: \"<{:" << name << ":}>\"" << endl;
+
     return 0;
 }
